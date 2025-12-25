@@ -1,0 +1,8 @@
+.env
+__pycache__/
+*.pyc
+venv/
+local_chat.db
+.zencoder/
+.zenflow/
+*.db
