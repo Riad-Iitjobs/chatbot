@@ -36,3 +36,21 @@ def try_message_insert(session_id, timestamp, role, content_text, has_attachment
     except Exception as e:
         print(f"Error saving message: {e}")
         raise e
+
+
+
+
+
+def get_all_sessions():
+    """Get list of all unique session IDs"""
+    connection = get_db_connection()
+    result = connection.execute(
+        "SELECT DISTINCT session_id FROM chats ORDER BY session_id"
+    ).fetchall()
+    return [row[0] for row in result]
+
+
+
+# def get_single_conversation(session_id):
+#     connection=get_db_connection()
+#     result = connection.execute("Select * from chats where session_id = ")

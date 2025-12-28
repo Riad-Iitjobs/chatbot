@@ -1,0 +1,131 @@
+{
+    "0": {
+        "Industry": "Accounting/Finance"
+    },
+    "1": {
+        "Industry": "Advertising/Public Relations"
+    },
+    "2": {
+        "Industry": "Aerospace/Aviation"
+    },
+    "3": {
+        "Industry": "Arts/Entertainment/Publishing"
+    },
+    "4": {
+        "Industry": "Automotive"
+    },
+    "5": {
+        "Industry": "Banking/Mortgage"
+    },
+    "6": {
+        "Industry": "Business Development"
+    },
+    "7": {
+        "Industry": "Business Opportunity"
+    },
+    "8": {
+        "Industry": "Clerical/Administrative"
+    },
+    "9": {
+        "Industry": "Construction/Facilities"
+    },
+    "10": {
+        "Industry": "Consumer Goods"
+    },
+    "11": {
+        "Industry": "Customer Service"
+    },
+    "12": {
+        "Industry": "Education/Training"
+    },
+    "13": {
+        "Industry": "Energy/Utilities"
+    },
+    "14": {
+        "Industry": "Engineering"
+    },
+    "15": {
+        "Industry": "Government/Military"
+    },
+    "16": {
+        "Industry": "Green"
+    },
+    "17": {
+        "Industry": "Healthcare"
+    },
+    "18": {
+        "Industry": "Hospitality/Travel"
+    },
+    "19": {
+        "Industry": "Human Resources"
+    },
+    "20": {
+        "Industry": "Installation/Maintenance"
+    },
+    "21": {
+        "Industry": "Insurance"
+    },
+    "22": {
+        "Industry": "Internet"
+    },
+    "23": {
+        "Industry": "Job Search Aids"
+    },
+    "24": {
+        "Industry": "Law Enforcement/Security"
+    },
+    "25": {
+        "Industry": "Legal"
+    },
+    "26": {
+        "Industry": "Management/Executive"
+    },
+    "27": {
+        "Industry": "Manufacturing/Operations"
+    },
+    "28": {
+        "Industry": "Marketing"
+    },
+    "29": {
+        "Industry": "Non-Profit/Volunteer"
+    },
+    "30": {
+        "Industry": "Pharmaceutical/Biotech"
+    },
+    "31": {
+        "Industry": "Professional Services"
+    },
+    "32": {
+        "Industry": "QA/Quality Control"
+    },
+    "33": {
+        "Industry": "Real Estate"
+    },
+    "34": {
+        "Industry": "Restaurant/Food Service"
+    },
+    "35": {
+        "Industry": "Retail"
+    },
+    "36": {
+        "Industry": "Sales"
+    },
+    "37": {
+        "Industry": "Science/Research"
+    },
+    "38": {
+        "Industry": "Skilled Labor"
+    },
+    "39": {
+        "Industry": "Technology"
+    },
+    "40": {
+        "Industry": "Telecommunications"
+    },
+    "41": {
+        "Industry": "Transportation/Logistics"
+    },
+    "42": {
+        "Industry": "Other"
+    }
+}
