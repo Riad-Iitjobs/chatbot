@@ -1,0 +1,11 @@
+department,employee_name,salary,hire_date
+Engineering,Alice Johnson,120000,2020-01-15
+Engineering,Bob Smith,115000,2021-03-20
+Engineering,Carol White,125000,2019-07-10
+Sales,David Brown,80000,2022-02-01
+Sales,Eve Davis,85000,2021-11-15
+Sales,Frank Miller,82000,2023-01-10
+Marketing,Grace Lee,75000,2020-06-01
+Marketing,Henry Wilson,78000,2021-09-20
+HR,Iris Taylor,70000,2019-12-05
+HR,Jack Anderson,72000,2022-04-12
