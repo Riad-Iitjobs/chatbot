@@ -84,16 +84,13 @@ def execute_csv_query(csv_path, sql_query):
     try:
         connection = get_db_connection()
 
-        # Replace csv_data placeholder with actual CSV read
         full_query = sql_query.replace(
             "FROM csv_data",
             f"FROM read_csv_auto('{csv_path}')"
         )
 
-        # Execute query
         result = connection.execute(full_query).fetchall()
 
-        # Get column names
         columns = [desc[0] for desc in connection.description]
 
         return {

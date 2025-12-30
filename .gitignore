@@ -6,3 +6,33 @@ local_chat.db
 .zencoder/
 .zenflow/
 *.db
+
+# Model files
+*.pt
+*.bin
+*.onnx
+*.pb
+*.h5
+*.ckpt
+*.pth
+
+# Uploads directory
+uploads/
+
+# System files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Audio/Image test files
+*.wav
+*.mp3
+*.webp
+*.png
+*.jpg
+*.jpeg
+*.gif
+
+# Logs
+*.log

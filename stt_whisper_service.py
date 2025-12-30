@@ -1,18 +1,21 @@
-from transformers import pipeline
+import whisper
 import os
 
-# Global pipeline - loaded once and reused
-_whisper_pipe = None
+# Global model - loaded once and reused
+_whisper_model = None
 
-def get_whisper_pipeline():
-    """Get or create Whisper pipeline (lazy loading)"""
-    global _whisper_pipe
-    if _whisper_pipe is None:
-        _whisper_pipe = pipeline(
-            "automatic-speech-recognition",
-            model="openai/whisper-tiny"
-        )
-    return _whisper_pipe
+def get_whisper_model():
+    """Get or create Whisper model (lazy loading)"""
+    global _whisper_model
+    if _whisper_model is None:
+        model_path = "tiny.pt"
+        if not os.path.exists(model_path):
+            raise FileNotFoundError(
+                f"Whisper model not found at '{model_path}'. "
+                "Please download from https://github.com/openai/whisper"
+            )
+        _whisper_model = whisper.load_model(model_path, device="cpu")
+    return _whisper_model
 
 
 def transcribe_audio_whisper(audio_file_path):
@@ -32,8 +35,8 @@ def transcribe_audio_whisper(audio_file_path):
         if not os.path.exists(audio_file_path):
             raise FileNotFoundError(f"Audio file not found: {audio_file_path}")
 
-        pipe = get_whisper_pipeline()
-        result = pipe(audio_file_path)
+        model = get_whisper_model()
+        result = model.transcribe(audio_file_path)
 
         return result["text"].strip()
 
@@ -41,11 +44,14 @@ def transcribe_audio_whisper(audio_file_path):
         raise Exception(f"Whisper transcription failed: {str(e)}")
 
 
-# Test function (only runs when script is executed directly)
 if __name__ == "__main__":
-    test_audio = "audio.mp3"
-    if os.path.exists(test_audio):
+    import sys
+
+    if len(sys.argv) > 1:
+        # Test with audio file
+        test_audio = sys.argv[1]
+        print(f"Transcribing: {test_audio}")
         transcription = transcribe_audio_whisper(test_audio)
         print(f"Transcription: {transcription}")
     else:
-        print(f"Test audio file '{test_audio}' not found")
+        print("Usage: python stt_whisper_service.py <audio_file_path>")
